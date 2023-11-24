@@ -79,13 +79,13 @@ Guacamole.Position = function Position(template) {
 
         // Element ultimately depends on positioning within document body,
         // take document scroll into account.
-        if (parent) {
-            var documentScrollLeft = document.body.scrollLeft || document.documentElement.scrollLeft;
-            var documentScrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-
-            this.x -= parent.offsetLeft - documentScrollLeft;
-            this.y -= parent.offsetTop  - documentScrollTop;
-        }
+        // if (parent) {
+        //     var documentScrollLeft = document.body.scrollLeft || document.documentElement.scrollLeft;
+        //     var documentScrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        //
+        //     this.x -= parent.offsetLeft - documentScrollLeft;
+        //     this.y -= parent.offsetTop  - documentScrollTop;
+        // }
 
     };
 
