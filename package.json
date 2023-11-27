@@ -1,25 +1,25 @@
 {
   "name": "guacamole-common-js-picasso",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Guacamole javascript client by Picasso",
   "type": "module",
-  "main": "dist/cjs/guacamole-common.js",
-  "module": "dist/esm/guacamole-common.js",
+  "main": "dist/cjs/guacamole-common-picasso.js",
+  "module": "dist/esm/guacamole-common-picasso.js",
   "exports": {
     ".": {
-      "import": "./dist/esm/guacamole-common.js",
-      "require": "./dist/cjs/guacamole-common.js"
+      "import": "./dist/esm/guacamole-common-picasso.js",
+      "require": "./dist/cjs/guacamole-common-picasso.js"
     }
   },
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs",
-    "build:esm:concat": "cat guacamole-common-js/src/main/webapp/modules/*.js > dist/esm/guacamole-common.js",
-    "build:esm:append": "echo 'export default Guacamole;' >> dist/esm/guacamole-common.js",
-    "build:esm:minify": "minify dist/esm/guacamole-common.js > dist/esm/guacamole-common.min.js",
+    "build:esm:concat": "cat guacamole-common-js-picasso/src/main/webapp/modules/*.js > dist/esm/guacamole-common-picasso.js",
+    "build:esm:append": "echo 'export default Guacamole;' >> dist/esm/guacamole-common-picasso.js",
+    "build:esm:minify": "minify dist/esm/guacamole-common-picasso.js > dist/esm/guacamole-common-picasso.min.js",
     "build:esm": "npm run build:esm:concat && npm run build:esm:append && npm run build:esm:minify",
-    "build:cjs:concat": "cat guacamole-common-js/src/main/webapp/modules/*.js > dist/cjs/guacamole-common.js",
-    "build:cjs:append": "echo 'module.exports = Guacamole;' >> dist/cjs/guacamole-common.js",
-    "build:cjs:minify": "minify dist/cjs/guacamole-common.js > dist/cjs/guacamole-common.min.js",
+    "build:cjs:concat": "cat guacamole-common-js-picasso/src/main/webapp/modules/*.js > dist/cjs/guacamole-common-picasso.js",
+    "build:cjs:append": "echo 'module.exports = Guacamole;' >> dist/cjs/guacamole-common-picasso.js",
+    "build:cjs:minify": "minify dist/cjs/guacamole-common-picasso.js > dist/cjs/guacamole-common-picasso.min.js",
     "build:cjs": "npm run build:cjs:concat && npm run build:cjs:append && npm run build:cjs:minify",
     "prepublishOnly": "npm run build"
   },
